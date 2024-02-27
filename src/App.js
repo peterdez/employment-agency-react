@@ -33,7 +33,7 @@ textDecoration: "none",
 
 function App() {
   const listArr = [
-    {linkTo: "/", text: "Home"},
+    {linkTo: "/home", text: "Home"},
     {linkTo: "/registration", text: "Registration"},
     {linkTo: "/list", text: "List"},
     {linkTo: "/list-search", text: "List Search"},
@@ -44,7 +44,8 @@ function App() {
   <Header theListArr={listArr} />
   {/*<Header theListArr={listArr} ulStyle={ulStyle} liStyle={liStyle} liAStyle={liAStyle} />*/}
   <Routes>
-    <Route path="/" element={<Home />}/>
+    <Route path="/" element={<Registration />}/>
+    <Route path="/home" element={<Home />}/>
     <Route path="/registration" element={<Registration/>}/>
     <Route path="/candidate/:id" element={<Candidate/>}/>
     <Route path="/candidate/:id/edit" element={<EditCandidateFormB/>}/>
